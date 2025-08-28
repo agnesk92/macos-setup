@@ -1,0 +1,10 @@
+[core]
+	autocrlf = input
+	editor = vim
+
+[init]
+	defaultBranch = main
+
+[user]
+	email = agi.uqbar@gmail.com
+	name = Agnes Kis
