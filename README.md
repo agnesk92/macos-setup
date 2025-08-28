@@ -2,7 +2,7 @@
 
 ## ⚡ Setup
 
-Set up the [Gitleaks](https://github.com/gitleaks/) pre-commit hook:
+For pre-commit secret scanning, set up [Gitleaks](https://github.com/gitleaks/):
 
 ```shell
 # install pre-commit and gitleaks
@@ -13,12 +13,15 @@ brew install gitleaks
 pre-commit install
 ```
 
-## 🔧 Use autosetup script
-
-Run the script to setup basics, like git.
+## 🔧 Run the scripts
 
 ```shell
-./scripts/setup.sh
+# Install basics, eg. git
+./scripts/setup-basics.sh
+
+# Clone config repo and setup
+# tbd. private repo
+./scripts/setup-configs.sh
 ```
 
 ## 💡 Setup details
@@ -38,3 +41,8 @@ brew bundle dump --describe
 # Install packages on a new machine
 brew bundle --file=./Brewfile
 ```
+
+## ✨ Inspiration
+
+- [omerxx/dotfiles](https://github.com/omerxx/dotfiles)
+- [MacAutoSetup](https://github.com/NLaundry/MacAutoSetup)
