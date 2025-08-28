@@ -14,12 +14,20 @@ else
   echo "📁 Directory $CLONE_DIR already exists. Skipping clone."
 fi
 
-# Install with Brew
-if [[ -f ./Brewfile ]]; then
-  echo "Installing applications from Brewfile..."
-  brew bundle --file=./Brewfile
+# Install from Brewfile.private
+if [[ -f ./Brewfile.private ]]; then
+  echo "Installing applications from Brewfile.private..."
+  brew bundle --file=./Brewfile.private
 else
-  echo "Warning: Brewfile not found in current directory"
+  echo "Warning: Brewfile.private not found in current directory"
+fi
+
+# Install from Brewfile.work
+if [[ -f ./Brewfile.work ]]; then
+  echo "Installing applications from Brewfile.work..."
+  brew bundle --file=./Brewfile.work
+else
+  echo "Warning: Brewfile.work not found in current directory"
 fi
 
 # Use GNU Stow to symlink dotfiles
