@@ -42,7 +42,14 @@ brew bundle dump --describe
 brew bundle --file=./Brewfile
 ```
 
+## ♥️ Missing
+
+- macOS configs
+- set up obsidian (repo)
+-
+
 ## ✨ Inspiration
 
 - [omerxx/dotfiles](https://github.com/omerxx/dotfiles)
 - [MacAutoSetup](https://github.com/NLaundry/MacAutoSetup)
+- [joelazar/dotfiles](https://github.com/joelazar/dotfiles)
