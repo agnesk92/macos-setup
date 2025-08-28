@@ -26,6 +26,7 @@ brew "zoxide"
 
 ## 🎨 GUI Apps
 
+cask "claude"
 cask "aerospace"
 cask "alt-tab"
 cask "docker"
