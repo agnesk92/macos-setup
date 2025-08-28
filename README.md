@@ -20,8 +20,11 @@ pre-commit install
 ./scripts/setup-basics.sh
 
 # Clone config repo and setup
-# tbd. private repo
+# Note: needs ssh set up if the repo is private
 ./scripts/setup-configs.sh
+
+# MacOS preferences - in progress
+./scripts/setup-macos.sh
 ```
 
 ## 💡 Setup details
@@ -44,11 +47,11 @@ brew bundle --file=./Brewfile
 
 ## ♥️ Missing
 
-- macOS preferences
-- macOS: switch ctrl & fn
+- macOS preferences (in progress)
+- macOS: scriptify switching ctrl & fn
 - set up obsidian (repo)
 - [zen configs](https://www.reddit.com/r/zen_browser/comments/1l051dx/managing_zen_with_dotfiles/)
-- script ssh creation
+- scriptify ssh creation
 
 ## ✨ Inspiration
 
