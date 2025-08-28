@@ -44,10 +44,11 @@ brew bundle --file=./Brewfile
 
 ## ♥️ Missing
 
-- macOS configs
+- macOS preferences
+- macOS: switch ctrl & fn
 - set up obsidian (repo)
 - [zen configs](https://www.reddit.com/r/zen_browser/comments/1l051dx/managing_zen_with_dotfiles/)
--
+- script ssh creation
 
 ## ✨ Inspiration
 
