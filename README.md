@@ -52,6 +52,7 @@ brew bundle --file=./Brewfile
 
 ## ✨ Inspiration
 
-- [omerxx/dotfiles](https://github.com/omerxx/dotfiles)
-- [MacAutoSetup](https://github.com/NLaundry/MacAutoSetup)
 - [joelazar/dotfiles](https://github.com/joelazar/dotfiles)
+- [omerxx/dotfiles](https://github.com/omerxx/dotfiles)
+- [Swiss-Mac-User/macOS-scripted-setup](https://github.com/Swiss-Mac-User/macOS-scripted-setup)
+- [MacAutoSetup](https://github.com/NLaundry/MacAutoSetup)
