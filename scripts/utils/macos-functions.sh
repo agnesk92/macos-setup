@@ -14,3 +14,18 @@ function addAppToDock() {
     fi
 }
 export -f addAppToDock
+
+# --> Show % for Battery
+function showBatteryPercentage(){
+	# Show the Battery Icon in Menu Bar
+	defaults write com.apple.controlcenter "NSStatusItem Visible Battery" -int 1
+	# Show the Battery % Percentage in Menu Bar
+	defaults write com.apple.controlcenter "BatteryShowPercentage" -bool TRUE
+}
+export -f showBatteryPercentage
+
+# --> Restart the Dock process
+function restartDock(){
+    killall Dock
+}
+export -f restartDock

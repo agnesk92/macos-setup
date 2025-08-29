@@ -1,20 +1,55 @@
 #!/usr/bin/env bash
 
+## Load helpers
+source ./scripts/utils/macos-functions.sh > /dev/null
 
-# Add an Application to the macOS Dock
-# - usage: addAppToDock "[Application Name]"
-# - example: addAppToDock "Terminal"
-# Source: https://github.com/rpavlick/add_to_dock
-function addAppToDock() {
-    local app_name="$1"
-    local launchservices_path="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister"
-    local app_path=$($launchservices_path -dump | grep -o "/.*$app_name.app" | grep -v -E "Backups|Caches|TimeMachine|Temporary|/Volumes/$app_name" | uniq | sort | head -n1)
-    if open -Ra "$app_path"; then
-       defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$app_path</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
-    else
-       showinfo "Application not found: $1\n$app_path" "error"
-    fi
-}
-export -f addAppToDock
+## Keyboard
 
+# settings based on https://mac-key-repeat.zaymon.dev/
+execute "defaults write NSGlobalDomain KeyRepeat -int 1" "Keyboard: Set 15 ms key repeat"
+
+execute "defaults write NSGlobalDomain InitialKeyRepeat -int 13" "Keyboard: Set 195 ms initial delay"
+
+## Files
+
+execute "defaults write NSGlobalDomain AppleShowAllExtensions -bool true" "Show all filename extensions"
+
+## Toolbar
+
+showBatteryPercentage
+
+## Dock
+
+execute "defaults write com.apple.dock autohide -bool true" "Automatically hide and show the Dock"
+
+execute "defaults write com.apple.dock autohide-delay -float 0" "Remove the auto-hiding Dock delay"
+
+execute "defaults write com.apple.dock autohide-time-modifier -float 0" "Remove the animation when hiding/showing the Dock"
+
+execute "defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false" "Keyboard: Disable tooltip when holding key"
+
+execute "defaults write com.apple.dock show-process-indicators -bool false" "Don't show indicator for running Apps"
+
+execute "defaults write com.apple.dock show-recents -bool false" "Don't show recent applications in Dock"
+
+# Clear dock
+execute "defaults write com.apple.dock persistent-apps -array" "Remove all persistent apps from dock"
+
+# Clear dock - downloads, etc.
+execute "defaults write com.apple.dock persistent-others -array" "Remove all persistent others from dock"
+
+# Add my apps in order to dock
+addAppToDock "Launchpad"
+addAppToDock "Slack"
+addAppToDock "Zen"
+addAppToDock "Ghostty"
+addAppToDock "Visual Studio Code"
 addAppToDock "Obsidian"
+addAppToDock "Spotify"
+
+# Dock size and position
+defaults write com.apple.dock tilesize -int 48
+defaults write com.apple.dock orientation -string "right"
+
+# See changes
+restartDock
