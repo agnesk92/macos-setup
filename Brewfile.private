@@ -5,10 +5,10 @@ tap "nikitabobko/tap" # Aerospace
 brew "pipx"
 brew "node"
 brew "uv"
-brew "nvm"
 
 ## 💻 CLI Tools
 
+brew "atuin"
 brew "gh"
 brew "git"
 brew "gitleaks"

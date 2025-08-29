@@ -6,6 +6,7 @@ end
 
 starship init fish | source
 zoxide init fish | source
+atuin init fish | source
 
 # aliases
 alias lsla="ls -la"
@@ -22,4 +23,3 @@ alias brain="cd ~/Documents/Obsidian/brain"
 
 # default programs
 set -gx TERMINAL ghostty
-
