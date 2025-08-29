@@ -49,7 +49,9 @@ brew bundle --file=./Brewfile
 
 - macOS preferences (in progress)
 - macOS: scriptify switching ctrl & fn
-- set up obsidian (repo)
+- macOS: icloud sync
+- repos: set up obsidian (repo)
+- repos: clone most important repos
 - [zen configs](https://www.reddit.com/r/zen_browser/comments/1l051dx/managing_zen_with_dotfiles/)
 - scriptify ssh creation
 
