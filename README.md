@@ -23,7 +23,7 @@ pre-commit install
 # Note: needs ssh set up if the repo is private
 ./scripts/setup-configs.sh
 
-# MacOS preferences - in progress
+# MacOS preferences - dock, animations, toolbar, etc.
 ./scripts/setup-macos.sh
 ```
 
@@ -47,13 +47,11 @@ brew bundle --file=./Brewfile
 
 ## ♥️ Missing
 
-- macOS preferences (in progress)
 - macOS: scriptify switching ctrl & fn
 - macOS: icloud sync
-- repos: set up obsidian (repo)
-- repos: clone most important repos
+- repos: clone most important repos (eg. obsidian repos)
 - [zen configs](https://www.reddit.com/r/zen_browser/comments/1l051dx/managing_zen_with_dotfiles/)
-- scriptify ssh creation
+- scripts: ssh creation
 
 ## ✨ Inspiration
 
