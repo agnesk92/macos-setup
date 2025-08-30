@@ -91,18 +91,27 @@ outer.right = 0
 # end tell'
 # '''
 
+alt-enter = 'exec-and-forget open /Applications/Ghostty.app'
+# cmd-space = 'exec-and-forget open /Applications/Claude.app'
+
 # cmd-ctrl-alt-f = 'fullscreen'
 alt-f = 'fullscreen'
+
+# Navigate to next workspace (wrapping around)
+ctrl-alt-right = 'workspace --wrap-around next'
+
+# Navigate to previous workspace (wrapping around)
+ctrl-alt-left = 'workspace --wrap-around prev'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+alt-h = 'focus --boundaries-action wrap-around-the-workspace left'
+alt-j = 'focus --boundaries-action wrap-around-the-workspace down'
+alt-k = 'focus --boundaries-action wrap-around-the-workspace up'
+alt-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
@@ -169,17 +178,33 @@ shift-down = ['volume set 0', 'mode main']
 
 # Auto-assign apps to specific workspaces
 [[on-window-detected]]
-if.app-id = "com.mitchellh.ghostty"
-run = ['layout tiling', 'move-node-to-workspace 1']
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
-run = 'move-node-to-workspace 3'
+if.app-id = 'org.mozilla.firefox'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
+if.app-id = "com.mitchellh.ghostty"
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.VSCode"
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop'
+run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'com.todoist.mac.Todoist'
+run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
 if.app-id = 'com.spotify.client'
-run = 'move-node-to-workspace 10'
+run = 'move-node-to-workspace 9'
