@@ -4,12 +4,13 @@ set -e
 
 echo "🚀 Starting macOS setup..."
 
-# Run basic setup
 echo "📋 Running basic setup..."
-bash scripts/setup-basics.sh
+# bash scripts/setup-basics.sh
 
-# Run config setup
 echo "⚙️  Running config setup..."
 bash scripts/setup-configs.sh
+
+echo "🛠️  Running macOS preferences setup..."
+# bash scripts/setup-macos.sh
 
 echo "✅ Setup complete!"
