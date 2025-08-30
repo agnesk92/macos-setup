@@ -5,6 +5,9 @@ tap "nikitabobko/tap" # Aerospace
 brew "pipx"
 brew "node"
 brew "uv"
+brew "go"
+brew "gofumpt"
+brew "golangci-lint-langserver"
 
 ## 💻 CLI Tools
 
@@ -27,6 +30,8 @@ brew "zoxide"
 
 ## 🎨 GUI Apps
 
+cask "google-drive"
+cask "protonvpn"
 cask "claude"
 cask "aerospace"
 cask "alt-tab"
@@ -41,3 +46,7 @@ cask "spotify"
 cask "firefox"
 cask "obsidian"
 cask "zen-browser"
+
+## 💻 Code extensions
+
+vscode "golang.go"
