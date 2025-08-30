@@ -53,3 +53,7 @@ defaults write com.apple.dock orientation -string "right"
 
 # See changes
 restartDock
+
+# Todo - for aerospace
+# https://nikitabobko.github.io/AeroSpace/guide#a-note-on-displays-have-separate-spaces
+# defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
