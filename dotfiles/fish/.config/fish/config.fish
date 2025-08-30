@@ -8,6 +8,8 @@ starship init fish | source
 zoxide init fish | source
 atuin init fish | source
 
+fish_add_path $HOME/.local/bin
+
 # aliases
 alias lsla="ls -la"
 alias size="du -hsc *"
