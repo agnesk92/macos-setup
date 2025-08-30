@@ -11,6 +11,11 @@ brew "golangci-lint-langserver"
 
 ## 💻 CLI Tools
 
+# brew "k9s"
+# brew "kubernetes-cli"
+# brew "kubectx"
+
+brew "httpie"
 brew "atuin"
 brew "gh"
 brew "git"
@@ -27,6 +32,7 @@ brew "lazydocker"
 brew "stow"
 brew "direnv"
 brew "zoxide"
+brew "pgcli"
 
 ## 🎨 GUI Apps
 
