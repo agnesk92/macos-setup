@@ -7,12 +7,14 @@ CLONE_DIR="$HOME/Projects/Personal/macos-setup"
 
 # Clone configs repo if needed
 if [ ! -d "$CLONE_DIR" ]; then
-  echo "📥 Cloning macos-setup into $CLONE_DIR..."
+  echo "Cloning macos-setup into $CLONE_DIR... 📥"
   mkdir -p "$(dirname "$CLONE_DIR")"
   git clone "$REPO_URL" "$CLONE_DIR"
 else
-  echo "📁 Directory $CLONE_DIR already exists. Skipping clone."
+  echo "Directory $CLONE_DIR already exists. Skipping clone. ⏭️"
 fi
+
+cd "$CLONE_DIR"
 
 # Install from Brewfile.personal
 if [[ -f ./Brewfile.personal ]]; then
@@ -32,10 +34,10 @@ fi
 
 # Install additional packages
 if [[ -f "scripts/utils/package-installs.sh" ]]; then
-  echo "📦 Installing additional packages..."
+  echo "Installing additional packages... 📦"
   bash scripts/utils/package-installs.sh
 else
-  echo "⚠️  Package install script not found, skipping..."
+  echo "Package install script not found, skipping... ⚠️"
 fi
 
 # Use GNU Stow to symlink dotfiles
