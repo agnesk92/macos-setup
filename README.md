@@ -15,6 +15,14 @@ pre-commit install
 
 ## 🔧 Run the scripts
 
+Run setup.sh
+
+```shell
+./setup.sh
+```
+
+Or run the scripts per demand
+
 ```shell
 # Install basics, eg. git
 ./scripts/setup-basics.sh
