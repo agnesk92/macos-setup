@@ -2,3 +2,5 @@
 
 cask "slack"
 cask "granola"
+cask "loom"
+cask "1password"
