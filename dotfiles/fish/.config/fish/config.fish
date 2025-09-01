@@ -27,6 +27,7 @@ alias lg="lazygit"
 alias projects="cd ~/Projects"
 alias pet="cd ~/Projects/Personal"
 alias brain="cd ~/Documents/Obsidian/brain"
+alias ht="cd ~/Projects/Humanitec"
 
 # default programs
 set -gx TERMINAL ghostty
