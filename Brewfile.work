@@ -1,3 +1,4 @@
 ## 🎨 GUI Apps
 
 cask "slack"
+cask "granola"
