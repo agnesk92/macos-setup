@@ -11,7 +11,9 @@
       "Read(**/*.key)",
       "Read(**/credentials/**)",
       "Read(**/.aws/**)",
-      "Read(**/.ssh/**)"
+      "Read(**/.ssh/**)",
+      "Read(**/build)",
+      "Read(**/credentials.json)"
     ]
   },
   "env": {
