@@ -1,3 +1,9 @@
+tap "hashicorp/tap"
+
+## 💻 CLI Tools
+
+brew "hashicorp/tap/terraform"
+
 ## 🎨 GUI Apps
 
 cask "slack"
