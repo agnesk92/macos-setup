@@ -10,6 +10,7 @@ load_nvm > /dev/stderr
 starship init fish | source
 zoxide init fish | source
 atuin init fish | source
+direnv hook fish | source
 
 # set -gx PATH $HOME/.local/bin $PATH
 fish_add_path $HOME/.local/bin
@@ -31,3 +32,11 @@ alias ht="cd ~/Projects/Humanitec"
 
 # default programs
 set -gx TERMINAL ghostty
+
+# gcloud
+set -gx PATH $PATH ~/google-cloud-sdk/bin
+
+# go
+# set -gx PATH /opt/homebrew/opt/go@1.24/bin $PATH
+# or
+fish_add_path /opt/homebrew/opt/go@1.24/bin
