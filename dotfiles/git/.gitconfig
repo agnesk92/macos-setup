@@ -8,3 +8,6 @@
 [user]
 	email = agi.uqbar@gmail.com
 	name = Agnes Kis
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
