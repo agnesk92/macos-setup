@@ -13,7 +13,8 @@
       "Read(**/.aws/**)",
       "Read(**/.ssh/**)",
       "Read(**/build)",
-      "Read(**/credentials.json)"
+      "Read(**/credentials.json)",
+      "Read(**/key.json)"
     ]
   },
   "env": {
