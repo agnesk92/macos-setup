@@ -7,10 +7,10 @@ end
 # You must call it on initialization or listening to directory switching won't work
 load_nvm > /dev/stderr
 
+direnv hook fish | source
 starship init fish | source
 zoxide init fish | source
 atuin init fish | source
-direnv hook fish | source
 
 # set -gx PATH $HOME/.local/bin $PATH
 fish_add_path $HOME/.local/bin
@@ -22,6 +22,8 @@ alias size="du -hsc *"
 
 # tools
 alias gmj="gitmoji -c"
+# alias gcmj="gacp --no-push --no-add --emoji emoji"
+alias gcz="git-cz"
 alias lg="lazygit"
 
 # projects
