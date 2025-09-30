@@ -22,8 +22,7 @@ alias size="du -hsc *"
 
 # tools
 alias gmj="gitmoji -c"
-# alias gcmj="gacp --no-push --no-add --emoji emoji"
-alias gcz="git-cz"
+alias gm="git-cz"
 alias lg="lazygit"
 
 # projects
@@ -31,6 +30,26 @@ alias projects="cd ~/Projects"
 alias pet="cd ~/Projects/Personal"
 alias brain="cd ~/Documents/Obsidian/brain"
 alias ht="cd ~/Projects/Humanitec"
+
+# docker
+alias dcleannone='docker rmi (docker images | grep "<none>" | awk \'{print $3}\')'
+alias dstopall='docker ps -a | awk \'{print $1}\' | tail -n +2 | xargs docker stop'
+alias dremoveall='docker ps -a | awk \'{print $1}\' | tail -n +2 | xargs docker rm -fv'
+
+# kubernetes
+alias k='kubectl'
+alias kd='kubectl describe'
+alias kdd='kubectl describe deployment'
+alias kdp='kubectl describe pod'
+alias kei='kubectl exec -it'
+alias kg='kubectl get'
+alias kgall='kubectl get --all-namespaces all'
+alias kgd='kubectl get deployments'
+alias kgp='kubectl get pod'
+alias kgsvc='kubectl get service'
+alias kl='kubectl logs --all-containers=true'
+alias krm='kubectl delete'
+alias tf='tofu'
 
 # default programs
 set -gx TERMINAL ghostty
@@ -42,3 +61,7 @@ set -gx PATH $PATH ~/google-cloud-sdk/bin
 # set -gx PATH /opt/homebrew/opt/go@1.24/bin $PATH
 # or
 fish_add_path /opt/homebrew/opt/go@1.24/bin
+
+set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
+carapace _carapace | source
+
