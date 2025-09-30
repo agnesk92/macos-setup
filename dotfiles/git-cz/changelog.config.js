@@ -12,7 +12,7 @@ module.exports = {
     "ci",
     "perf",
   ],
-  maxMessageLength: 25,
+  maxMessageLength: 65,
   minMessageLength: 2,
   questions: ["type", "scope", "subject"],
 };
