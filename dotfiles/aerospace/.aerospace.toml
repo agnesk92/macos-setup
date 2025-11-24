@@ -177,6 +177,7 @@ up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
 # Auto-assign apps to specific workspaces
+## see app-ids of current apps: aerospace list-apps
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace 1'
@@ -195,6 +196,10 @@ run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = "com.microsoft.VSCode"
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
