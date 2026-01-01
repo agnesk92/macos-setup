@@ -22,8 +22,9 @@ alias size="du -hsc *"
 
 # tools
 alias gmj="gitmoji -c"
-alias gm="git-cz"
+alias gmc="git-cz"
 alias lg="lazygit"
+alias gcz="git-cz"
 
 # projects
 alias projects="cd ~/Projects"
@@ -49,7 +50,10 @@ alias kgp='kubectl get pod'
 alias kgsvc='kubectl get service'
 alias kl='kubectl logs --all-containers=true'
 alias krm='kubectl delete'
+
+# misc infra
 alias tf='tofu'
+alias ggc='gcloud'
 
 # default programs
 set -gx TERMINAL ghostty
@@ -65,3 +69,6 @@ fish_add_path /opt/homebrew/opt/go@1.24/bin
 set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
 carapace _carapace | source
 
+
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
+set -gx PATH /opt/homebrew/opt/postgresql@17/bin $PATH
