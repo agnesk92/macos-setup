@@ -3,6 +3,7 @@ tap "hashicorp/tap"
 ## 💻 CLI Tools
 
 brew "hashicorp/tap/terraform"
+brew "asdf"
 
 ## 🎨 GUI Apps
 

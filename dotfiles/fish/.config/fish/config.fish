@@ -22,8 +22,9 @@ alias size="du -hsc *"
 
 # tools
 alias gmj="gitmoji -c"
-alias gmc="git-cz"
 alias lg="lazygit"
+
+alias gmc="git-cz"
 alias gcz="git-cz"
 
 alias prs="gh search prs --owner humanitec --state open --author @me"
