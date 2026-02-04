@@ -26,6 +26,8 @@ alias gmc="git-cz"
 alias lg="lazygit"
 alias gcz="git-cz"
 
+alias prs="gh search prs --owner humanitec --state open --author @me"
+
 # projects
 alias projects="cd ~/Projects"
 alias pet="cd ~/Projects/Personal"
