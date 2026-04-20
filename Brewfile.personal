@@ -55,7 +55,6 @@ cask "vlc"
 cask "spotify"
 cask "firefox"
 cask "obsidian"
-cask "zen-browser"
 
 ## 💻 Code extensions
 

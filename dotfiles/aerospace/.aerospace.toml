@@ -185,10 +185,6 @@ shift-down = ['volume set 0', 'mode main']
 # Auto-assign apps to specific workspaces
 ## see app-ids of current apps: aerospace list-apps
 [[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
-run = 'move-node-to-workspace 1'
-
-[[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace 1'
 
