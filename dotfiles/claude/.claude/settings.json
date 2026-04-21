@@ -22,5 +22,10 @@
       "Read(**/credentials.json)",
       "Read(**/key.json)"
     ]
+  },
+  "voiceEnabled": true,
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
   }
 }

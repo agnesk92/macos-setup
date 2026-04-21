@@ -13,10 +13,11 @@
   // ══════════════════════════════════════════════════════════════════════════════
   // AGENT (AI Assistant)
   // ══════════════════════════════════════════════════════════════════════════════
+  "show_edit_predictions": true,
   "edit_predictions": {
     "disabled_globs": [],
-    // "provider": "zed",
-    "provider": "copilot",
+    "provider": "zed",
+    // "provider": "copilot",
   },
   "show_completions_on_input": true,
 
@@ -202,13 +203,15 @@
   // ══════════════════════════════════════════════════════════════════════════════
   // EDITOR BEHAVIOR
   // ══════════════════════════════════════════════════════════════════════════════
-  "preferred_line_length": 140,
+  "preferred_line_length": 80,
   "double_click_in_multibuffer": "open", // double-click opens file instead of selecting
   "close_on_file_delete": true, // auto-close tabs when file deleted on disk
   "use_smartcase_search": false, // case-insensitive unless uppercase used
 
   "vertical_scroll_margin": 0, // cursor can reach screen edges
   "scroll_beyond_last_line": "one_page",
+
+  "allow_rewrap": "anywhere", // for the editor: rewrap action
 
   // ══════════════════════════════════════════════════════════════════════════════
   // GIT INTEGRATION
@@ -262,7 +265,7 @@
   },
   "active_pane_modifiers": {
     "inactive_opacity": 0.7,
-    "border_size": 0.5,
+    "border_size": 0.0,
   },
 
   // ══════════════════════════════════════════════════════════════════════════════
@@ -306,6 +309,11 @@
   // PANELS
   // ══════════════════════════════════════════════════════════════════════════════
   "project_panel": {
+    "indent_guides": {
+      "show": "always",
+    },
+    "bold_folder_labels": false,
+    "hide_root": true,
     "entry_spacing": "standard",
     "button": false,
     "default_width": 300,
@@ -363,7 +371,9 @@
   // ══════════════════════════════════════════════════════════════════════════════
   "terminal": {
     "button": false,
-    "scrollbar": { "show": "never" },
+    "scrollbar": {
+      "show": "never",
+    },
     "max_scroll_history_lines": 50000,
     "blinking": "off",
 
@@ -548,7 +558,13 @@
         "completeUnimported": true,
         "staticcheck": false,
         "semanticTokens": true,
-        "directoryFilters": ["-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules"],
+        "directoryFilters": [
+          "-.git",
+          "-.vscode",
+          "-.idea",
+          "-.vscode-test",
+          "-node_modules",
+        ],
         "experimentalPostfixCompletions": true,
         "codelenses": {
           "gc_details": true,
@@ -581,7 +597,14 @@
     // golangci-lint
     "golangci-lint": {
       "initialization_options": {
-        "command": ["golangci-lint", "run", "--output.json.path", "stdout", "--show-stats=false", "--output.text.path="],
+        "command": [
+          "golangci-lint",
+          "run",
+          "--output.json.path",
+          "stdout",
+          "--show-stats=false",
+          "--output.text.path=",
+        ],
       },
     },
     "eslint": {
@@ -596,6 +619,8 @@
   // ══════════════════════════════════════════════════════════════════════════════
   // LANGUAGE-SPECIFIC SETTINGS
   // ══════════════════════════════════════════════════════════════════════════════
+  // "semantic_tokens": "full",
+  "semantic_tokens": "combined",
   "languages": {
     "TypeScript": {
       "language_servers": ["typescript-language-server", "eslint", "..."],
@@ -627,7 +652,10 @@
         {
           "external": {
             "command": "bash",
-            "arguments": ["-c", "ruff check --select=I --fix --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}"],
+            "arguments": [
+              "-c",
+              "ruff check --select=I --fix --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}",
+            ],
           },
         },
       ],

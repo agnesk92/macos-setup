@@ -17,5 +17,29 @@
     "bindings": {
       // "j k": "vim::NormalBefore"
     },
+  },
+  {
+    "context": "Editor && mode == full && edit_prediction",
+    "bindings": {
+      "ctrl-alt-n": "editor::NextEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && mode == full && edit_prediction",
+    "unbind": {
+      "alt-tab": "editor::NextEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && mode == full && edit_prediction",
+    "bindings": {
+      "ctrl-alt-p": "editor::PreviousEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && mode == full && edit_prediction",
+    "unbind": {
+      "alt-shift-tab": "editor::PreviousEditPrediction"
+    }
   }
 ]
