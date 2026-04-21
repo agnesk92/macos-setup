@@ -13,11 +13,15 @@
   // ══════════════════════════════════════════════════════════════════════════════
   // AGENT (AI Assistant)
   // ══════════════════════════════════════════════════════════════════════════════
-  // "edit_predictions": {
-  //   "disabled_globs": [],
-  //   "provider": "zed",
-  // },
+  "edit_predictions": {
+    "disabled_globs": [],
+    // "provider": "zed",
+    "provider": "copilot",
+  },
+  "show_completions_on_input": true,
+
   "agent": {
+    "max_content_width": 2500.0,
     "notify_when_agent_waiting": "never",
     // "play_sound_when_agent_done": "always",
     "show_turn_stats": true, // show timer + token count per turn
@@ -538,6 +542,7 @@
     // Go: gofumpt, semantic tokens, codelenses, hints
     "gopls": {
       "initialization_options": {
+        "build.buildFlags": ["-tags=integration"],
         "gofumpt": true,
         "usePlaceholders": false,
         "completeUnimported": true,
