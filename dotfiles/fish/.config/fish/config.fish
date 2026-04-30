@@ -28,7 +28,7 @@ alias gmc="git-cz"
 alias gcz="git-cz"
 
 alias prs="gh search prs --owner humanitec --state open --author @me"
-alias reviews="gh search prs --owner humanitec --state open --review-requested @me -- -author:app/dependabot"
+alias reviews="gh search prs --owner humanitec --state open --review-requested @me --review required --draft=false -- -author:app/dependabot"
 alias prlinks='echo "🔗 https://github.com/pulls?q=is:open+is:pr+author:@me+org:humanitec" && echo "" && gh search prs --owner humanitec --state open --author @me'
 
 # projects
