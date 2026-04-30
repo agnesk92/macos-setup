@@ -10,18 +10,19 @@
   // ══════════════════════════════════════════════════════════════════════════════
   // AI / EDIT PREDICTIONS
   // ══════════════════════════════════════════════════════════════════════════════
-  // ══════════════════════════════════════════════════════════════════════════════
-  // AGENT (AI Assistant)
-  // ══════════════════════════════════════════════════════════════════════════════
   "show_edit_predictions": true,
+  "show_completions_on_input": true,
   "edit_predictions": {
     "disabled_globs": [],
     "provider": "zed",
     // "provider": "copilot",
   },
-  "show_completions_on_input": true,
 
+  // ══════════════════════════════════════════════════════════════════════════════
+  // AGENT (AI Assistant)
+  // ══════════════════════════════════════════════════════════════════════════════
   "agent": {
+    "dock": "left",
     "max_content_width": 2500.0,
     "notify_when_agent_waiting": "never",
     // "play_sound_when_agent_done": "always",
@@ -154,6 +155,8 @@
   // ══════════════════════════════════════════════════════════════════════════════
   // APPEARANCE
   // ══════════════════════════════════════════════════════════════════════════════
+  "show_whitespaces": "all",
+
   "debugger": {
     "button": false,
   },
@@ -203,6 +206,7 @@
   // ══════════════════════════════════════════════════════════════════════════════
   // EDITOR BEHAVIOR
   // ══════════════════════════════════════════════════════════════════════════════
+  "cli_default_open_behavior": "existing_window",
   "preferred_line_length": 80,
   "double_click_in_multibuffer": "open", // double-click opens file instead of selecting
   "close_on_file_delete": true, // auto-close tabs when file deleted on disk
@@ -277,7 +281,7 @@
     "show_project_items": true,
     "show_branch_name": true,
     "show_menus": true,
-    "show_branch_icon": true,
+    // "show_branch_icon": true,
     // "show_sign_in": false,
     // "show_user_menu": false,
   },
@@ -309,12 +313,13 @@
   // PANELS
   // ══════════════════════════════════════════════════════════════════════════════
   "project_panel": {
+    "dock": "right",
     "indent_guides": {
       "show": "always",
     },
     "bold_folder_labels": false,
     "hide_root": true,
-    "entry_spacing": "standard",
+    "entry_spacing": "comfortable",
     "button": false,
     "default_width": 300,
     "auto_fold_dirs": false,
@@ -327,10 +332,11 @@
     "dock": "right",
   },
   "collaboration_panel": {
-    "button": false,
+    "dock": "right",
     "default_width": 300,
   },
   "git_panel": {
+    "dock": "right",
     "button": false,
     "tree_view": true,
     "sort_by_path": true,
@@ -530,6 +536,12 @@
     // Python: basedpyright with relaxed type checking
     "basedpyright": {
       "settings": {
+        "basedpyright.analysis": {
+          "diagnosticMode": "workspace",
+          "inlayHints": {
+            "callArgumentNames": false,
+          },
+        },
         "python": {
           "pythonPath": ".venv/bin/python",
           "analysis": {
@@ -621,6 +633,7 @@
   // ══════════════════════════════════════════════════════════════════════════════
   // "semantic_tokens": "full",
   "semantic_tokens": "combined",
+  "format_on_save": "on",
   "languages": {
     "TypeScript": {
       "language_servers": ["typescript-language-server", "eslint", "..."],
@@ -648,17 +661,14 @@
     "Python": {
       "format_on_save": "on",
       "language_servers": ["!pyright", "basedpyright", "ruff"],
-      "formatter": [
-        {
-          "external": {
-            "command": "bash",
-            "arguments": [
-              "-c",
-              "ruff check --select=I --fix --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}",
-            ],
-          },
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff",
         },
-      ],
+      },
     },
     "Go": {
       "format_on_save": "on",
@@ -671,12 +681,12 @@
     },
     "Terraform": {
       "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "tofu",
-          "arguments": ["fmt", "-"],
-        },
-      },
+      // "formatter": {
+      //   "external": {
+      //     "command": "tofu",
+      //     "arguments": ["fmt", "-"],
+      //   },
+      // },
     },
     "Fish": {
       "format_on_save": "on",

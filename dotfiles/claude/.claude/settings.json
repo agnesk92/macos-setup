@@ -23,9 +23,20 @@
       "Read(**/key.json)"
     ]
   },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    }
+  },
   "voiceEnabled": true,
   "voice": {
     "enabled": true,
     "mode": "hold"
+  },
+  "enabledPlugins": {
+    "caveman@caveman": true
   }
 }
