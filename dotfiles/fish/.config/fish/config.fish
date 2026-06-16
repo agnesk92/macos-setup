@@ -2,23 +2,48 @@ if not status is-interactive
     return
 end
 
+# PATH additions (canonical)
+for p in \
+    $HOME/.local/bin \
+    $HOME/.npm/bin \
+    /opt/homebrew/opt/go/bin \
+    /opt/homebrew/opt/postgresql@17/bin \
+    $HOME/google-cloud-sdk/bin
+    if test -d $p
+        # fish_add_path -g $p
+        set -gx --prepend PATH $p
+    end
+end
+
+# ASDF - add shims to path
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
+
+# Do not use fish_add_path (added in Fish 3.2) because it
+# potentially changes the order of items in PATH
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+set --erase _asdf_shims
+
 /opt/homebrew/bin/brew shellenv | source
 
-# You must call it on initialization or listening to directory switching won't work
-load_nvm > /dev/stderr
+# Auto-switching Node by `.nvmrc`.
+# note: must call it on initialization or listening to directory switching won't work
+load_nvm >/dev/stderr
 
 direnv hook fish | source
 starship init fish | source
 zoxide init fish | source
 atuin init fish | source
 
-# set -gx PATH $HOME/.local/bin $PATH
-fish_add_path $HOME/.local/bin
-fish_add_path $HOME/.npm/bin
-
 # aliases
 alias lsla="ls -la"
 alias size="du -hsc *"
+alias prettypath='printf "%s\n" $PATH'
 
 # tools
 alias gmj="gitmoji -c"
@@ -63,17 +88,5 @@ alias ggc='gcloud'
 # default programs
 set -gx TERMINAL ghostty
 
-# gcloud
-set -gx PATH $PATH ~/google-cloud-sdk/bin
-
-# go
-# set -gx PATH /opt/homebrew/opt/go@1.24/bin $PATH
-# or
-fish_add_path /opt/homebrew/opt/go@1.24/bin
-
 set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
 carapace _carapace | source
-
-
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
-set -gx PATH /opt/homebrew/opt/postgresql@17/bin $PATH
