@@ -22,7 +22,7 @@
   // AGENT (AI Assistant)
   // ══════════════════════════════════════════════════════════════════════════════
   "agent": {
-    "dock": "left",
+    "dock": "right",
     "max_content_width": 2500.0,
     "notify_when_agent_waiting": "never",
     // "play_sound_when_agent_done": "always",
@@ -54,6 +54,10 @@
   // ══════════════════════════════════════════════════════════════════════════════
   "agent_servers": {
     "claude-acp": {
+      "default_config_options": {
+        "effort": "medium",
+        "mode": "acceptEdits",
+      },
       "type": "registry",
       "favorite_models": ["opus", "default"],
       // "default_mode": "bypassPermissions",
@@ -231,7 +235,7 @@
   // INLAY HINTS & INDENT GUIDES
   // ══════════════════════════════════════════════════════════════════════════════
   "inlay_hints": {
-    "enabled": true,
+    // "enabled": true,
   },
   "indent_guides": {
     "coloring": "indent_aware", // different colors per indent level
@@ -313,7 +317,7 @@
   // PANELS
   // ══════════════════════════════════════════════════════════════════════════════
   "project_panel": {
-    "dock": "right",
+    "dock": "left",
     "indent_guides": {
       "show": "always",
     },
