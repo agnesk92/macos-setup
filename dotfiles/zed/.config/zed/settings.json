@@ -651,6 +651,13 @@
         "source.fixAll.eslint": true,
       },
     },
+    "YAML": {
+      "prettier": {
+        "singleQuote": true,
+        "format_on_save": "on",
+        "allowed": true,
+      },
+    },
     "JavaScript": {
       "formatter": {
         "external": {
