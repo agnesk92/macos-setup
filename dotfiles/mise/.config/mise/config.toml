@@ -1,0 +1,4 @@
+[tools]
+node = "22"
+"npm:git-cz" = "latest"
+"npm:@earendil-works/pi-coding-agent" = "latest"

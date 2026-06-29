@@ -46,6 +46,8 @@ alias size="du -hsc *"
 alias prettypath='printf "%s\n" $PATH'
 
 # tools
+alias q="pi --model big-pickle -p"
+
 alias gmj="gitmoji -c"
 alias lg="lazygit"
 
@@ -90,3 +92,9 @@ set -gx TERMINAL ghostty
 
 set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
 carapace _carapace | source
+
+# Mise
+mise activate fish --shims | source
+mise activate fish | source
+
+fish_add_path --prepend -g $HOME/.local/share/mise/shims
