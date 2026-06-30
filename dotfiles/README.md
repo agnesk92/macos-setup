@@ -13,3 +13,9 @@ stow --verbose --target="$HOME" --dir=./dotfiles --restow zed
 # Partial stow
 stow --verbose --adopt --target="$HOME" --dir=./dotfiles zed
 ```
+
+What's stowed right now?
+
+```fish
+./scripts/utils/list-stowed-packages.sh
+```
