@@ -5,3 +5,12 @@ tmux/plugins/
 history.txt
 
 Brewfile-*
+
+auth.json
+
+# Shitty coding agent
+dotfiles/pi/.pi/agent/sessions/
+dotfiles/pi/.pi/agent/bin
+
+# I dont want people to know what I am working on
+dotfiles/pi/.pi/agent/trust.json

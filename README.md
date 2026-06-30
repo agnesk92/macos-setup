@@ -4,26 +4,31 @@
 
 For pre-commit secret scanning, set up [Gitleaks](https://github.com/gitleaks/):
 
-```shell
+Assuming you use Mise and UV for Python:
+
+```fish
 # install pre-commit and gitleaks
-pipx install pre-commit
+uv tool install pre-commit
 brew install gitleaks
 
 # set up pre-commit hook
 pre-commit install
+
+# try git leaks
+gitleaks dir . --verbose
 ```
 
 ## 🔧 Run the scripts
 
 Run setup.sh
 
-```shell
+```fish
 ./setup.sh
 ```
 
 Or run the scripts per demand
 
-```shell
+```fish
 # Install basics, eg. git
 ./scripts/setup-basics.sh
 

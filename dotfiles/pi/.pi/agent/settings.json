@@ -1,0 +1,20 @@
+{
+  "lastChangelogVersion": "0.80.2",
+  "defaultProvider": "claude-bridge",
+  "defaultModel": "claude-opus-4-8",
+  "defaultThinkingLevel": "medium",
+  "theme": "catppuccin-mocha",
+  "editorPaddingX": 2,
+  "showHardwareCursor": false,
+  "terminal": {
+    "showImages": true
+  },
+  "compaction": {
+    "enabled": true
+  },
+  "packages": [
+    "npm:@aliou/pi-guardrails",
+    "npm:pi-claude-bridge"
+  ],
+  "hideThinkingBlock": false
+}
