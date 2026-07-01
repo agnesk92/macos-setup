@@ -1,61 +1,116 @@
 tap "nikitabobko/tap" # Aerospace
+tap "anomalyco/tap" # OpenCode
+tap "aws/tap"
+tap "hashicorp/tap"
+tap "humanitec/tap"
+tap "lindell/multi-gitter"
+tap "loft-sh/tap", trusted: true # vcluster
+tap "norwoodj/tap" # helm-docs
+tap "score-spec/tap"
 
 ## 🙊 Languages
 
-brew "pipx"
-brew "node"
-brew "uv"
-brew "go"
+brew "go@1.24"
 brew "gofumpt"
 brew "golangci-lint"
 brew "golangci-lint-langserver"
+brew "node"
+brew "pipx"
 brew "pnpm"
+brew "uv"
 
 ## 💻 CLI Tools
 
-brew "kind"
-brew "kubernetes-cli"
-brew "k9s"
-brew "carapace"
-# brew "kubectx"
-brew "ripgrep"
-brew "httpie"
+brew "anomalyco/tap/opencode", trusted: true
 brew "atuin"
+brew "aws/tap/eksctl", trusted: true
+brew "awscli"
+brew "azure-cli"
+brew "btop"
+brew "carapace"
+brew "delve"
+brew "direnv"
+brew "fastfetch"
+brew "ffmpeg"
+brew "fish"
 brew "gh"
 brew "git"
 brew "gitleaks"
 brew "gitmoji"
-brew "fastfetch"
-brew "fish"
+brew "goose"
+brew "helm"
 brew "htop"
-brew "btop"
-brew "starship"
-brew "neovim"
-brew "lazygit"
+brew "httpie"
+brew "humanitec/tap/cli", trusted: true
+brew "k9s"
+brew "kind"
+brew "kubectx"
+brew "kubernetes-cli"
 brew "lazydocker"
-brew "stow"
-brew "direnv"
-brew "zoxide"
+brew "lazygit"
+brew "loft-sh/tap/vcluster", trusted: true
+brew "mise"
+brew "neovim"
+brew "norwoodj/tap/helm-docs", trusted: true
+brew "opentofu"
+brew "operator-sdk"
 brew "pgcli"
+brew "postgresql@17"
+brew "ripgrep"
+brew "score-spec/tap/score-compose", trusted: true
+brew "starship"
+brew "stow"
+brew "yazi"
+brew "yq"
+brew "yt-dlp"
+brew "zoxide"
 
 ## 🎨 GUI Apps
 
-cask "google-drive"
-cask "protonvpn"
-cask "claude"
-cask "aerospace"
+cask "1password"
+cask "1password-cli"
+cask "nikitabobko/tap/aerospace", trusted: true
 cask "alt-tab"
-cask "docker"
-cask "ghostty"
-cask "raycast"
-cask "visual-studio-code"
-cask "todoist-app"
 cask "calibre"
-cask "vlc"
-cask "spotify"
+cask "claude"
+cask "claude-code"
+cask "codex"
+cask "dbeaver-community"
+cask "docker-desktop"
 cask "firefox"
+cask "font-fira-code-nerd-font"
+cask "ghostty"
+cask "google-chrome"
+cask "google-drive"
+cask "granola"
+cask "helium-browser"
+cask "lindell/multi-gitter/multi-gitter", trusted: true
 cask "obsidian"
+cask "protonvpn"
+cask "raycast"
+cask "slack"
+cask "spotify"
+cask "stats"
+cask "steam"
+cask "thaw"
+cask "todoist-app"
+cask "vlc"
+cask "zed"
 
 ## 💻 Code extensions
 
 vscode "golang.go"
+
+## 🐹 Go tools
+
+go "github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs"
+go "github.com/humanitec/gogenoas/cmd/gogenoas"
+go "github.com/humanitec/hctl"
+go "go.uber.org/mock/mockgen"
+go "golang.org/x/tools/gopls"
+go "honnef.co/go/tools/cmd/staticcheck"
+go "mvdan.cc/gofumpt"
+
+## 📦 NPM tools
+
+npm "corepack"

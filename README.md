@@ -54,8 +54,15 @@ Using [Homebrew](https://brew.sh/)
 # Create Brewfile with installed packages
 brew bundle dump --describe
 
+# Check validity
+brew bundle check --file=Brewfile.personal
+
 # Install packages on a new machine
-brew bundle --file=./Brewfile
+brew bundle --file=./Brewfile.personal
+brew bundle install --file=Brewfile.personal
+
+# Dry-run cleanup
+brew bundle cleanup --file=Brewfile.personal
 ```
 
 ## ♥️ Missing
