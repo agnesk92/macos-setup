@@ -17,68 +17,27 @@ for p in \
     end
 end
 
+# Homebrew
 /opt/homebrew/bin/brew shellenv | source
 
+# Abbreviations
+source ~/.config/fish/abbreviations.fish
+
+# Defaults
+set -gx TERMINAL ghostty
+
+# Tools
 direnv hook fish | source
 starship init fish | source
 zoxide init fish | source
 atuin init fish | source
 
-# aliases
-alias lsla="ls -la"
-alias size="du -hsc *"
-alias prettypath='printf "%s\n" $PATH'
-
-# tools
-alias q="pi --model big-pickle -p"
-
-alias gmj="gitmoji -c"
-alias lg="lazygit"
-
-alias gmc="git-cz"
-alias gcz="git-cz"
-
-alias prs="gh search prs --owner humanitec --state open --author @me"
-alias reviews="gh search prs --owner humanitec --state open --review-requested @me --review required --draft=false -- -author:app/dependabot"
-alias prlinks='echo "🔗 https://github.com/pulls?q=is:open+is:pr+author:@me+org:humanitec" && echo "" && gh search prs --owner humanitec --state open --author @me'
-
-# projects
-alias projects="cd ~/Projects"
-alias pet="cd ~/Projects/Personal"
-alias brain="cd ~/Documents/Obsidian/brain"
-alias ht="cd ~/Projects/Humanitec"
-
-# docker
-alias dcleannone='docker rmi (docker images | grep "<none>" | awk \'{print $3}\')'
-alias dstopall='docker ps -a | awk \'{print $1}\' | tail -n +2 | xargs docker stop'
-alias dremoveall='docker ps -a | awk \'{print $1}\' | tail -n +2 | xargs docker rm -fv'
-
-# kubernetes
-alias k='kubectl'
-alias kd='kubectl describe'
-alias kdd='kubectl describe deployment'
-alias kdp='kubectl describe pod'
-alias kei='kubectl exec -it'
-alias kg='kubectl get'
-alias kgall='kubectl get --all-namespaces all'
-alias kgd='kubectl get deployments'
-alias kgp='kubectl get pod'
-alias kgsvc='kubectl get service'
-alias kl='kubectl logs --all-containers=true'
-alias krm='kubectl delete'
-
-# misc infra
-alias tf='tofu'
-alias ggc='gcloud'
-
-# default programs
-set -gx TERMINAL ghostty
-
-set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
+# Carapace
+set -gx CARAPACE_BRIDGES 'fish,zsh,bash,inshellisense' # optional fallback completions
 carapace _carapace | source
 
 # Mise
-mise activate fish --shims | source
 mise activate fish | source
 
-fish_add_path --prepend -g $HOME/.local/share/mise/shims
+# 1pwd shell completion
+op completion fish | source
