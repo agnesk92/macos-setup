@@ -62,6 +62,7 @@ brew "ripgrep"
 brew "score-spec/tap/score-compose", trusted: true
 brew "starship"
 brew "stow"
+brew "tv"
 brew "yazi"
 brew "yq"
 brew "yt-dlp"
