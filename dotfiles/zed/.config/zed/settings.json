@@ -10,6 +10,7 @@
   // ══════════════════════════════════════════════════════════════════════════════
   // AI / EDIT PREDICTIONS
   // ══════════════════════════════════════════════════════════════════════════════
+  "diff_view_style": "split",
   "show_edit_predictions": true,
   "show_completions_on_input": true,
   "edit_predictions": {
@@ -59,8 +60,6 @@
         "mode": "default",
       },
       "type": "registry",
-      "favorite_models": ["opus", "default"],
-      // "default_mode": "bypassPermissions",
     },
     "pi-acp": {
       "type": "registry",
@@ -185,15 +184,15 @@
   "agent_ui_font_size": 13.0,
 
   "icon_theme": {
-    "mode": "light",
-    "light": "Catppuccin Mocha",
-    "dark": "Catppuccin Mocha",
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé",
   },
 
   "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "Gruvbox Dark Soft",
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé",
   },
   "cursor_blink": false, // rainbow brackets
   "document_symbols": "on",
@@ -471,6 +470,7 @@
       "**/values*.yaml",
     ],
     "Shell Script": ["*.envrc*"],
+    "Plain Text": [".env", ".env.*"],
     "Nginx": ["**/nginx/**/*.conf", "nginx.conf"],
   },
 
