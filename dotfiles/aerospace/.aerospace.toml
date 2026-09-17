@@ -19,7 +19,7 @@ persistent-workspaces = [
     "A", "B", "C", "D", "E"
 ]
 
-focus-follows-mouse.enabled = true
+focus-follows-mouse.enabled = false
 
 # Start AeroSpace at login
 start-at-login = true
@@ -195,13 +195,18 @@ up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
 # Auto-assign apps to specific workspaces
-## see app-ids of current apps: aerospace list-apps
+## see app-ids of current apps:
+## aerospace list-apps
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.hyprnote.stable'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
@@ -221,12 +226,16 @@ if.app-id = 'org.jkiss.dbeaver.core.product'
 run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
-if.app-id = 'com.anthropic.claudefordesktop'
-run = 'move-node-to-workspace 7'
+if.app-id = 'com.tinyapp.TablePlus'
+run = ['layout floating', 'move-node-to-workspace 5']
 
 [[on-window-detected]]
 if.app-id = 'com.1password.1password'
 run = 'move-node-to-workspace 6'
+
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop'
+run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
