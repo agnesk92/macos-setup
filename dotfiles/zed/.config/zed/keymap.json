@@ -41,5 +41,23 @@
     "unbind": {
       "alt-shift-tab": "editor::PreviousEditPrediction"
     }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-shift-k": "pane::TogglePinTab"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-k shift-enter": "pane::TogglePinTab"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-shift-k": "editor::DeleteLine"
+    }
   }
 ]
