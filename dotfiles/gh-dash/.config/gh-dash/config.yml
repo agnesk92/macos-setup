@@ -6,7 +6,7 @@ prSections:
   - title: My Draft PRs
     filters: is:open author:@me org:humanitec is:draft
   - title: To Review
-    filters: is:open review-requested:@me org:humanitec -is:draft
+    filters: is:open review-requested:@me org:humanitec -is:draft -author:app/dependabot
   - title: Involved
     filters: is:open involves:@me -author:@me
 issuesSections:

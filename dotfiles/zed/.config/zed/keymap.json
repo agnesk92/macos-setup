@@ -21,25 +21,58 @@
   {
     "context": "Editor && mode == full && edit_prediction",
     "bindings": {
-      "ctrl-alt-n": "editor::NextEditPrediction"
-    }
+      "ctrl-alt-n": "editor::NextEditPrediction",
+    },
   },
   {
     "context": "Editor && mode == full && edit_prediction",
     "unbind": {
-      "alt-tab": "editor::NextEditPrediction"
-    }
+      "alt-tab": "editor::NextEditPrediction",
+    },
   },
   {
     "context": "Editor && mode == full && edit_prediction",
     "bindings": {
-      "ctrl-alt-p": "editor::PreviousEditPrediction"
-    }
+      "ctrl-alt-p": "editor::PreviousEditPrediction",
+    },
   },
   {
     "context": "Editor && mode == full && edit_prediction",
     "unbind": {
-      "alt-shift-tab": "editor::PreviousEditPrediction"
-    }
-  }
+      "alt-shift-tab": "editor::PreviousEditPrediction",
+    },
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-shift-k": "pane::TogglePinTab",
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-k shift-enter": "pane::TogglePinTab",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-shift-k": "editor::DeleteLine",
+    },
+  },
+  {
+    "bindings": {
+      "cmd-?": "agent::Toggle",
+    },
+  },
+  {
+    "bindings": {
+      "cmd-w": "workspace::CloseActiveDock",
+    },
+  },
+  {
+    "bindings": {
+      "cmd-w": "git_panel::Close",
+    },
+  },
 ]
