@@ -16,4 +16,4 @@ dotfiles/pi/.pi/agent/bin
 dotfiles/pi/.pi/agent/trust.json
 
 # Installed by tldraw Desktop
-dotfiles/claude/.claude/skills/tldraw-offline/
+dotfiles/agents/.agents/skills/tldraw-offline/
