@@ -43,7 +43,7 @@ fi
 # Use GNU Stow to symlink dotfiles
 echo "Setting up dotfiles with GNU Stow..."
 # Real dirs so stow links files inside, not the whole dir (keeps runtime state out of the repo)
-mkdir -p "$HOME/.claude/plugins"
-stow --target="$HOME" --dir=./dotfiles aerospace agents claude fish gh ghostty git gitmoji starship vim
+mkdir -p "$HOME/.claude/plugins" "$HOME/Library/Application Support/k9s"
+stow --target="$HOME" --dir=./dotfiles aerospace agents claude fish gh gh-dash ghostty git git-cz gitmoji k9s mise pi starship vim zed
 # Claude Code doesn't read ~/.agents/skills yet
 ln -sfn ../.agents/skills "$HOME/.claude/skills"
