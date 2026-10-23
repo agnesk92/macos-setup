@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "plugins": {
+    "caveman@caveman": [
+      {
+        "scope": "user",
+        "installPath": "/Users/agnesk/.claude/plugins/cache/caveman/caveman/0d95a81d35a9",
+        "version": "0d95a81d35a9",
+        "installedAt": "2026-07-16T10:20:16.181Z",
+        "lastUpdated": "2026-07-16T10:20:16.181Z",
+        "gitCommitSha": "0d95a81d35a9f2d123a5e9430d1cfc43d55f1bb0"
+      }
+    ],
+    "i-have-adhd@i-have-adhd": [
+      {
+        "scope": "user",
+        "installPath": "/Users/agnesk/.claude/plugins/cache/i-have-adhd/i-have-adhd/0.3.0",
+        "version": "0.3.0",
+        "installedAt": "2026-09-14T14:13:35.540Z",
+        "lastUpdated": "2026-09-14T14:13:35.540Z",
+        "gitCommitSha": "4092de07ce3ed88389d77c0d623b7af89b40ac0e"
+      }
+    ],
+    "humanizer@humanizer": [
+      {
+        "scope": "user",
+        "installPath": "/Users/agnesk/.claude/plugins/cache/humanizer/humanizer/3.0.0",
+        "version": "3.0.0",
+        "installedAt": "2026-09-16T14:06:43.455Z",
+        "lastUpdated": "2026-09-16T14:06:43.455Z",
+        "gitCommitSha": "9862685f575c65a8247f90369951df1b3416e3d6"
+      }
+    ]
+  }
+}

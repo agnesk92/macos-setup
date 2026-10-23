@@ -14,3 +14,6 @@ dotfiles/pi/.pi/agent/bin
 
 # I dont want people to know what I am working on
 dotfiles/pi/.pi/agent/trust.json
+
+# Installed by tldraw Desktop
+dotfiles/claude/.claude/skills/tldraw-offline/

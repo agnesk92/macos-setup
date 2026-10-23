@@ -1,0 +1,26 @@
+{
+  "caveman": {
+    "source": {
+      "source": "github",
+      "repo": "JuliusBrussee/caveman"
+    },
+    "installLocation": "/Users/agnesk/.claude/plugins/marketplaces/caveman",
+    "lastUpdated": "2026-07-16T10:17:04.575Z"
+  },
+  "i-have-adhd": {
+    "source": {
+      "source": "github",
+      "repo": "ayghri/i-have-adhd"
+    },
+    "installLocation": "/Users/agnesk/.claude/plugins/marketplaces/i-have-adhd",
+    "lastUpdated": "2026-09-14T14:13:33.578Z"
+  },
+  "humanizer": {
+    "source": {
+      "source": "github",
+      "repo": "blader/humanizer"
+    },
+    "installLocation": "/Users/agnesk/.claude/plugins/marketplaces/humanizer",
+    "lastUpdated": "2026-09-16T14:06:33.212Z"
+  }
+}

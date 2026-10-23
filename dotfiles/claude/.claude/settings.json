@@ -1,27 +1,76 @@
 {
   "cleanupPeriodDays": 180,
   "env": {
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "DISABLE_TELEMETRY": "1",
     "DISABLE_ERROR_REPORTING": "1",
-    "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1"
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
   },
   "includeCoAuthoredBy": false,
   "permissions": {
+    "ask": [
+      "Bash(gh api:*)",
+      "Bash(gh pr review:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(gh pr close:*)",
+      "Bash(gh pr comment:*)",
+      "Bash(gh pr edit:*)"
+    ],
     "deny": [
-      "Bash(curl:*)",
-      "Read(**/.env)",
-      "Read(**/.env*)",
-      "Read(**/secrets/**)",
-      "Read(**/*.pem)",
+      "Bash(dd * of=/dev/*)",
+      "Bash(diskutil apfs changePassphrase *)",
+      "Bash(diskutil apfs decryptVolume *)",
+      "Bash(diskutil apfs deleteContainer *)",
+      "Bash(diskutil apfs deleteSnapshot *)",
+      "Bash(diskutil apfs deleteVolume *)",
+      "Bash(diskutil apfs deleteVolumeGroup *)",
+      "Bash(diskutil apfs eraseVolume *)",
+      "Bash(diskutil appleRAID *)",
+      "Bash(diskutil coreStorage *)",
+      "Bash(diskutil cs *)",
+      "Bash(diskutil disableJournal *)",
+      "Bash(diskutil disableOwnership *)",
+      "Bash(diskutil eraseDisk *)",
+      "Bash(diskutil eraseVolume *)",
+      "Bash(diskutil partitionDisk *)",
+      "Bash(diskutil randomDisk *)",
+      "Bash(diskutil reformat *)",
+      "Bash(diskutil resetFusion *)",
+      "Bash(diskutil zeroDisk *)",
+      "Bash(mkfs*)",
+      "Bash(newfs*)",
+      "Bash(rm -rf $HOME)",
+      "Bash(rm -rf $HOME/)",
+      "Bash(rm -rf $PAI_DIR)",
+      "Bash(rm -rf $PAI_HOME)",
+      "Bash(rm -rf /)",
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~)",
+      "Bash(rm -rf ~/)",
+      "Bash(sudo rm -rf /)",
+      "Bash(sudo rm -rf /*)",
+      "Bash(sudo rm -rf ~)",
+      "Bash(sudo rm -rf ~/)",
       "Read(**/*.key)",
-      "Read(**/credentials/**)",
+      "Read(**/*.pem)",
       "Read(**/.aws/**)",
+      "Read(**/.env*)",
       "Read(**/.ssh/**)",
+      "Read(**/credentials/**)",
+      "Read(**/secrets/**)",
+      "Bash(gh repo delete:*)",
+      "Bash(curl:*)",
       "Read(**/build)",
       "Read(**/credentials.json)",
       "Read(**/key.json)"
     ]
+  },
+  "enabledPlugins": {
+    "caveman@caveman": true,
+    "i-have-adhd@i-have-adhd": true,
+    "humanizer@humanizer": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
@@ -29,14 +78,24 @@
         "source": "github",
         "repo": "JuliusBrussee/caveman"
       }
+    },
+    "i-have-adhd": {
+      "source": {
+        "source": "github",
+        "repo": "ayghri/i-have-adhd"
+      }
+    },
+    "humanizer": {
+      "source": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      }
     }
   },
-  "voiceEnabled": true,
   "voice": {
     "enabled": true,
     "mode": "hold"
   },
-  "enabledPlugins": {
-    "caveman@caveman": true
-  }
+  "theme": "auto",
+  "voiceEnabled": true
 }

@@ -1,0 +1,1 @@
+humctl completion fish | source
