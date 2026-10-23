@@ -1,0 +1,69 @@
+# -----------------------------------------------------------------------------
+# Transparent skin
+# Preserve your terminal session background color
+# -----------------------------------------------------------------------------
+
+# Skin...
+k9s:
+  body:
+    fgColor: default
+    bgColor: default
+    logoColor: teal
+  prompt:
+    bgColor: default
+  info:
+    fgColor: olive
+    sectionColor: default
+  dialog:
+    bgColor: default
+    labelFgColor: default
+    fieldFgColor: default
+  frame:
+    border:
+      fgColor: gray
+      focusColor: teal
+    crumbs:
+      bgColor: default
+    title:
+      fgColor: teal
+      bgColor: default
+      counterColor: default
+      highlightColor: orange
+      filterColor: green
+    menu:
+      fgColor: gray
+      keyColor: blue
+      numKeyColor: purple
+    status:
+      newColor: default
+      modifyColor: green
+      addColor: blue
+      pendingColor: olive
+      errorColor: red
+      highlightColor: teal
+      killColor: purple
+      completedColor: gray
+  views:
+    charts:
+      bgColor: default
+    table:
+      bgColor: default
+      fgColor: default
+      header:
+        fgColor: gray
+        bgColor: default
+        sorterColor: teal
+      cursorBgColor: teal
+    xray:
+      bgColor: default
+    logs:
+      fgColor: default
+      bgColor: default
+      indicator:
+        fgColor: blue
+        bgColor: default
+        toggleOnColor: green
+        toggleOffColor: gray
+    yaml:
+      colonColor: default
+      valueColor: default
