@@ -2,7 +2,13 @@ command = /opt/homebrew/bin/fish --login --interactive
 
 theme = dark:Catppuccin Frappe,light:Catppuccin Latte
 
-font-size = 16
+font-family = "Atkinson Hyperlegible Mono"
+# font-family = "OpenDyslexicM Nerd Font Mono"
+font-size = 12
+
+adjust-cell-height = 30%
+minimum-contrast = 2
+font-thicken = true
 
 window-decoration = true
 mouse-hide-while-typing = true
@@ -13,4 +19,8 @@ background-blur-radius = 20
 window-padding-x = 35
 window-padding-y = 20,45
 
+window-width = 110
+
 window-padding-color = extend
+
+cursor-style-blink = false
