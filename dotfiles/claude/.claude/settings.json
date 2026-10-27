@@ -10,14 +10,6 @@
   },
   "includeCoAuthoredBy": false,
   "permissions": {
-    "ask": [
-      "Bash(gh api:*)",
-      "Bash(gh pr review:*)",
-      "Bash(gh pr merge:*)",
-      "Bash(gh pr close:*)",
-      "Bash(gh pr comment:*)",
-      "Bash(gh pr edit:*)"
-    ],
     "deny": [
       "Bash(dd * of=/dev/*)",
       "Bash(diskutil apfs changePassphrase *)",
@@ -65,10 +57,18 @@
       "Read(**/build)",
       "Read(**/credentials.json)",
       "Read(**/key.json)"
+    ],
+    "ask": [
+      "Bash(gh api:*)",
+      "Bash(gh pr review:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(gh pr close:*)",
+      "Bash(gh pr comment:*)",
+      "Bash(gh pr edit:*)"
     ]
   },
   "enabledPlugins": {
-    "caveman@caveman": true,
+    "caveman@caveman": false,
     "i-have-adhd@i-have-adhd": true,
     "humanizer@humanizer": true
   },
