@@ -179,8 +179,11 @@
     "active_language_button": true,
   },
 
-  "ui_font_size": 15.0,
-  "buffer_font_size": 13.0,
+  "ui_font_family": "Atkinson Hyperlegible Mono",
+  "buffer_font_family": "Atkinson Hyperlegible Mono",
+
+  "ui_font_size": 13.0,
+  "buffer_font_size": 10.0,
   "agent_ui_font_size": 13.0,
 
   "icon_theme": {
@@ -197,14 +200,13 @@
   "cursor_blink": false, // rainbow brackets
   "document_symbols": "on",
 
-  // "buffer_font_family": "Maple Mono NF",
-  // "buffer_font_features": {
-  // "calt": true, // standard ligatures (-> => != etc)
-  // "cv02": true, // alternative `a` with top arm
-  // "cv05": true, // alternative `g` in double story style
-  // "cv61": true, // alternative `,` and `;` with straight tail
-  // "cv63": true, // alternative `<=` in arrow style
-  // },
+  "buffer_font_features": {
+    "calt": true, // standard ligatures (-> => != etc)
+    "cv02": true, // alternative `a` with top arm
+    "cv05": true, // alternative `g` in double story style
+    "cv61": true, // alternative `,` and `;` with straight tail
+    "cv63": true, // alternative `<=` in arrow style
+  },
 
   // ══════════════════════════════════════════════════════════════════════════════
   // EDITOR BEHAVIOR
@@ -386,7 +388,7 @@
     "max_scroll_history_lines": 50000,
     "blinking": "off",
 
-    // "font_family": "Maple Mono NF",
+    "font_family": "Atkinson Hyperlegible Mono",
     "font_features": {
       // "calt": true,
       // "cv02": true,
