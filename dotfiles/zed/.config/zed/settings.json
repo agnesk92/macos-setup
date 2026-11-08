@@ -57,7 +57,7 @@
     "claude-acp": {
       "default_config_options": {
         "effort": "medium",
-        "mode": "default",
+        "mode": "auto",
       },
       "type": "registry",
     },
@@ -695,12 +695,12 @@
     },
     "Terraform": {
       "format_on_save": "on",
-      // "formatter": {
-      //   "external": {
-      //     "command": "tofu",
-      //     "arguments": ["fmt", "-"],
-      //   },
-      // },
+      "formatter": {
+        "external": {
+          "command": "tofu",
+          "arguments": ["fmt", "-"],
+        },
+      },
     },
     "Fish": {
       "format_on_save": "on",

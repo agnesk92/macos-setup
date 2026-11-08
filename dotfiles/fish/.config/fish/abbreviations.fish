@@ -43,6 +43,12 @@ abbr -a kgsvc 'kubectl get service'
 abbr -a kl 'kubectl logs --all-containers=true'
 abbr -a krm 'kubectl delete'
 
+
+# humctl
+abbr -a humctl-dev "humctl config set apiPrefix https://dev-api.humanitec.io"
+abbr -a humctl-stg "humctl config set apiPrefix https://staging-api.humanitec.io"
+abbr -a humctl-prd "humctl config set apiPrefix https://api.humanitec.io"
+
 # misc infra
 abbr -a tf tofu
 abbr -a ggc gcloud

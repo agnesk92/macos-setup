@@ -1,6 +1,8 @@
 tap "nikitabobko/tap" # Aerospace
 tap "anomalyco/tap" # OpenCode
 tap "aws/tap"
+tap "azure/kubelogin", "https://github.com/Azure/homebrew-kubelogin"
+tap "charmbracelet/tap", trusted: true # mods
 tap "hashicorp/tap"
 tap "humanitec/tap"
 tap "lindell/multi-gitter"
@@ -10,6 +12,7 @@ tap "score-spec/tap"
 
 ## 🙊 Languages
 
+brew "basedpyright"
 brew "go@1.24"
 brew "gofumpt"
 brew "golangci-lint"
@@ -21,29 +24,36 @@ brew "uv"
 
 ## 💻 CLI Tools
 
+brew "actionlint"
 brew "anomalyco/tap/opencode", trusted: true
 brew "atuin"
 brew "aws/tap/eksctl", trusted: true
 brew "awscli"
-brew "azure-cli"
+cask "azure-cli"
+brew "azure/kubelogin/kubelogin", trusted: true
 brew "btop"
 brew "carapace"
 brew "delve"
 brew "direnv"
+brew "exercism"
 brew "fastfetch"
 brew "ffmpeg"
 brew "fish"
+brew "flyctl"
 brew "fzf"
 brew "gh"
 brew "git"
 brew "gitleaks"
 brew "gitmoji"
+brew "glow"
 brew "gum"
 brew "goose"
 brew "helm"
 brew "htop"
 brew "httpie"
+brew "hugo"
 brew "humanitec/tap/cli", trusted: true
+brew "hunk"
 brew "k9s"
 brew "kind"
 brew "kubectx"
@@ -51,7 +61,9 @@ brew "kubernetes-cli"
 brew "lazydocker"
 brew "lazygit"
 brew "loft-sh/tap/vcluster", trusted: true
+brew "minikube"
 brew "mise"
+brew "charmbracelet/tap/mods", trusted: true
 brew "neovim"
 brew "norwoodj/tap/helm-docs", trusted: true
 brew "opentofu"
@@ -62,7 +74,8 @@ brew "ripgrep"
 brew "score-spec/tap/score-compose", trusted: true
 brew "starship"
 brew "stow"
-brew "tv"
+brew "television"
+brew "tokei"
 brew "yazi"
 brew "yq"
 brew "yt-dlp"
@@ -73,7 +86,8 @@ brew "zoxide"
 cask "1password"
 cask "1password-cli"
 cask "nikitabobko/tap/aerospace", trusted: true
-cask "alt-tab"
+cask "anarlog"
+cask "bitwarden"
 cask "calibre"
 cask "claude"
 cask "claude-code"
@@ -81,12 +95,13 @@ cask "codex"
 cask "dbeaver-community"
 cask "docker-desktop"
 cask "firefox"
+cask "font-atkinson-hyperlegible-mono"
 cask "font-fira-code-nerd-font"
+cask "font-opendyslexic-nerd-font"
 cask "ghostty"
-cask "google-chrome"
 cask "google-drive"
 cask "granola"
-cask "helium-browser"
+cask "macfuse"
 cask "lindell/multi-gitter/multi-gitter", trusted: true
 cask "obsidian"
 cask "protonvpn"
@@ -95,25 +110,17 @@ cask "slack"
 cask "spotify"
 cask "stats"
 cask "steam"
-cask "thaw"
+cask "tableplus"
 cask "todoist-app"
+cask "veracrypt"
+cask "visual-studio-code"
 cask "vlc"
 cask "zed"
-
-## 💻 Code extensions
-
-vscode "golang.go"
 
 ## 🐹 Go tools
 
 go "github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs"
-go "github.com/humanitec/gogenoas/cmd/gogenoas"
-go "github.com/humanitec/hctl"
 go "go.uber.org/mock/mockgen"
 go "golang.org/x/tools/gopls"
 go "honnef.co/go/tools/cmd/staticcheck"
 go "mvdan.cc/gofumpt"
-
-## 📦 NPM tools
-
-npm "corepack"

@@ -4,3 +4,8 @@ node = "22"
 "npm:@earendil-works/pi-coding-agent" = "latest"
 
 python = "3.14"
+go = "1.26.3"
+
+[settings]
+go_set_gobin = false # keep GOBIN at ~/go/bin, so brew bundle skips go/gofmt
+node.corepack = true
